@@ -1,38 +1,37 @@
 import React from 'react';
+import PageHero from '../components/PageHero';
 
 const Terms = () => {
   return (
-    <div className="w-full bg-white text-black py-20 px-4 sm:px-6 lg:px-8 min-h-[70vh]">
-      <div className="max-w-4xl mx-auto animate-fade-up">
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-8 text-heaven-green border-b pb-4 border-gray-100">Terms of Termination</h1>
-        <p className="mb-6 text-sm text-gray-500 font-semibold uppercase tracking-wider">Effective Date: October 2026</p>
-        
-        <div className="space-y-8 text-base md:text-lg leading-relaxed text-gray-800">
-          <section>
-            <h2 className="text-xl font-bold mb-3 text-black">1. Agreement to Terms</h2>
-            <p>These Terms of Termination constitute a legally binding agreement made between you and Heaven Global Pvt. Ltd., concerning your access to and use of our services.</p>
-          </section>
+    <div className="w-full bg-white pb-20">
+      <PageHero 
+        title="Terms of Service" 
+        subtitle="Terms and conditions governing the use of Heaven Global Pvt. Ltd. services and website." 
+        eyebrow="LEGAL STATEMENT" 
+      />
 
-          <section>
-            <h2 className="text-xl font-bold mb-3 text-black">2. Termination by User</h2>
-            <p>You may terminate your account and discontinue use of our services at any time by contacting our support team or through your account settings if applicable. Any outstanding obligations must be fulfilled upon termination.</p>
-          </section>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 space-y-8 text-gray-700 text-sm sm:text-base leading-relaxed">
+        <p className="text-xs text-gray-400 font-bold uppercase tracking-wider">Effective Date: October 2026</p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3 text-black">3. Termination by Company</h2>
-            <p>We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms of Service.</p>
-          </section>
+        <section className="bg-[#FAF9F5] p-6 rounded-2xl border border-gray-100 space-y-2">
+          <h2 className="text-lg font-bold text-[#0B6338]">1. Agreement to Terms</h2>
+          <p>By accessing or using the Heaven Global Pvt. Ltd. website, you agree to be bound by these Terms of Service. If you disagree with any part, you may not access our services.</p>
+        </section>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3 text-black">4. Effect of Termination</h2>
-            <p>Upon termination, your right to use the service will immediately cease. All provisions of the Terms which by their nature should survive termination shall survive termination, including ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
-          </section>
+        <section className="bg-[#FAF9F5] p-6 rounded-2xl border border-gray-100 space-y-2">
+          <h2 className="text-lg font-bold text-[#0B6338]">2. Intellectual Property</h2>
+          <p>All content, branding, logos, graphics, and materials available on this site are the exclusive property of Heaven Global Pvt. Ltd. and protected under applicable trademark laws.</p>
+        </section>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3 text-black">5. Changes to Terms</h2>
-            <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. It is your responsibility to review these Terms periodically.</p>
-          </section>
-        </div>
+        <section className="bg-[#FAF9F5] p-6 rounded-2xl border border-gray-100 space-y-2">
+          <h2 className="text-lg font-bold text-[#0B6338]">3. Product Pricing & Demo Data</h2>
+          <p>Product rates, specifications, and availability displayed on this website serve as sample wholesale and retail guidance and are subject to final confirmation upon business contract issuance.</p>
+        </section>
+
+        <section className="bg-[#FAF9F5] p-6 rounded-2xl border border-gray-100 space-y-2">
+          <h2 className="text-lg font-bold text-[#0B6338]">4. Contact Information</h2>
+          <p>For inquiries regarding these Terms, contact Heaven Global Pvt. Ltd. at <a href="mailto:info@heavengrocery.com" className="text-[#0B6338] font-bold underline">info@heavengrocery.com</a>.</p>
+        </section>
       </div>
     </div>
   );

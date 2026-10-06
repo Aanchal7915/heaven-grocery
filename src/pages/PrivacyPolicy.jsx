@@ -1,38 +1,42 @@
 import React from 'react';
+import PageHero from '../components/PageHero';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="w-full bg-white text-black py-20 px-4 sm:px-6 lg:px-8 min-h-[70vh]">
-      <div className="max-w-4xl mx-auto animate-fade-up">
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-8 text-heaven-green border-b pb-4 border-gray-100">Privacy Policy</h1>
-        <p className="mb-6 text-sm text-gray-500 font-semibold uppercase tracking-wider">Effective Date: October 2026</p>
-        
-        <div className="space-y-8 text-base md:text-lg leading-relaxed text-gray-800">
-          <section>
-            <h2 className="text-xl font-bold mb-3 text-black">1. Introduction</h2>
-            <p>Welcome to Heaven Global Pvt. Ltd. We respect your privacy and are committed to protecting your personal data. This Privacy Policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights.</p>
-          </section>
+    <div className="w-full bg-white pb-20">
+      <PageHero 
+        title="Privacy Policy" 
+        subtitle="How Heaven Global Pvt. Ltd. collects, uses, and safeguards your personal information." 
+        eyebrow="LEGAL STATEMENT" 
+      />
 
-          <section>
-            <h2 className="text-xl font-bold mb-3 text-black">2. Information We Collect</h2>
-            <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows: Identity Data, Contact Data, and Usage Data. We do not collect any Special Categories of Personal Data.</p>
-          </section>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 space-y-8 text-gray-700 text-sm sm:text-base leading-relaxed">
+        <p className="text-xs text-gray-400 font-bold uppercase tracking-wider">Effective Date: October 2026</p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3 text-black">3. How We Use Your Data</h2>
-            <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data to provide our services, manage our relationship with you, and improve our website and customer experiences.</p>
-          </section>
+        <section className="bg-[#FAF9F5] p-6 rounded-2xl border border-gray-100 space-y-2">
+          <h2 className="text-lg font-bold text-[#0B6338]">1. Introduction</h2>
+          <p>Welcome to Heaven Global Pvt. Ltd. We respect your privacy and are committed to protecting your personal data. This Privacy Policy informs you about how we handle your information when visiting our site or interacting with our services.</p>
+        </section>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3 text-black">4. Data Security</h2>
-            <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way, altered, or disclosed.</p>
-          </section>
+        <section className="bg-[#FAF9F5] p-6 rounded-2xl border border-gray-100 space-y-2">
+          <h2 className="text-lg font-bold text-[#0B6338]">2. Information We Collect</h2>
+          <p>We may collect identity details, contact information (email, phone number, company name), and usage metrics submitted voluntarily through inquiry forms or browser communications.</p>
+        </section>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3 text-black">5. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at our provided contact information.</p>
-          </section>
-        </div>
+        <section className="bg-[#FAF9F5] p-6 rounded-2xl border border-gray-100 space-y-2">
+          <h2 className="text-lg font-bold text-[#0B6338]">3. How We Use Your Data</h2>
+          <p>Your data is strictly utilized to process bulk order inquiries, respond to business messages, manage customer partnerships, and improve our services. We do not sell or trade your data.</p>
+        </section>
+
+        <section className="bg-[#FAF9F5] p-6 rounded-2xl border border-gray-100 space-y-2">
+          <h2 className="text-lg font-bold text-[#0B6338]">4. Data Security</h2>
+          <p>We implement appropriate physical, technical, and managerial safeguards to protect your personal details against unauthorized access, alteration, or disclosure.</p>
+        </section>
+
+        <section className="bg-[#FAF9F5] p-6 rounded-2xl border border-gray-100 space-y-2">
+          <h2 className="text-lg font-bold text-[#0B6338]">5. Contact Us</h2>
+          <p>If you have any questions regarding this Privacy Policy, please contact our team at <a href="mailto:info@heavengrocery.com" className="text-[#0B6338] font-bold underline">info@heavengrocery.com</a>.</p>
+        </section>
       </div>
     </div>
   );

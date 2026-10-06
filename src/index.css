@@ -1,44 +1,110 @@
 @import "tailwindcss";
 
 @theme {
-  --color-heaven-green: #0a5c36;
-  --color-heaven-gold: #eba13a;
-  --color-heaven-light-green: #f4fbf7;
-  --color-heaven-dark: #1f2937;
-  --color-heaven-accent: #3b82f6; /* For specific CTAs if requested, but mostly green/gold */
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --color-heaven-green: #0B6338;
+  --color-heaven-dark-green: #053D23;
+  --color-heaven-deep-green: #042616;
+  --color-heaven-gold: #D4A51C;
+  --color-heaven-gold-hover: #b88e14;
+  --color-heaven-light-green: #F4FBF7;
+  --color-heaven-cream: #FAF9F5;
+  --color-heaven-charcoal: #1F2937;
+  --color-heaven-gray-subtle: #F8FAF7;
+  --font-sans: 'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  color: #1f2937;
+  font-family: var(--font-sans);
+  color: #1F2937;
   background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #0B6338;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #053D23;
+}
+
+/* Organic Leaf & Wave Backgrounds */
+.bg-leaf-pattern {
+  background-color: #053D23;
+  background-image: radial-gradient(circle at 15% 15%, rgba(212, 165, 28, 0.15) 0%, transparent 40%),
+                    radial-gradient(circle at 85% 85%, rgba(11, 99, 56, 0.4) 0%, transparent 50%);
+}
+
+.bg-hero-organic {
+  background: radial-gradient(circle at 75% 30%, rgba(244, 251, 247, 1) 0%, rgba(255, 255, 255, 1) 60%),
+              linear-gradient(135deg, rgba(250, 249, 245, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+/* Glassmorphic cards */
+.glass-badge {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(11, 99, 56, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 231, 235, 0.8);
 }
 
 /* Animations */
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
 
-.animate-fade-up {
-  animation: fade-up 0.6s ease-out forwards;
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
 }
 
-.delay-100 {
-  animation-delay: 100ms;
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
 }
 
-.delay-200 {
-  animation-delay: 200ms;
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }
 
-.delay-300 {
-  animation-delay: 300ms;
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Custom shadows */
+.shadow-soft-lg {
+  box-shadow: 0 20px 40px -15px rgba(11, 99, 56, 0.08);
+}
+
+.shadow-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.shadow-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(11, 99, 56, 0.15);
 }

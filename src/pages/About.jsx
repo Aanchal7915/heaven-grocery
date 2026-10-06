@@ -1,81 +1,153 @@
 import React from 'react';
 import PageHero from '../components/PageHero';
-import { ShieldCheck, Target, Heart, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Leaf, ShieldCheck, Truck, Award, Target, Eye, Heart, ArrowRight } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="w-full">
+    <div className="w-full bg-white pb-20">
+      
+      {/* PAGE HERO */}
       <PageHero 
-        title="ABOUT HEAVEN GLOBAL" 
-        subtitle="Building a Better Way to Deliver Everyday Essentials" 
+        title="Building a Trusted Brand in Everyday Essentials"
+        subtitle="Heaven Global Pvt. Ltd. is dedicated to delivering fresh, reliable, and high-quality produce and grocery products to homes and businesses across India."
+        eyebrow="ABOUT HEAVEN GLOBAL"
       />
 
-      <section className="py-20 bg-white">
+      {/* COMPANY OVERVIEW SECTION */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="animate-fade-up">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-heaven-green mb-6">Built on Quality. Driven by Trust.</h2>
-              <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
-                Heaven Global Pvt. Ltd. was founded on a simple principle: every household deserves access to high-quality, fresh, and reliable everyday essentials. Under our flagship brand, Heaven Grocery, we have committed ourselves to sourcing and delivering the best products for our customers.
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-6 space-y-6" data-aos="fade-right">
+              <div className="inline-flex items-center gap-2 text-[#0B6338] font-bold text-xs uppercase tracking-widest">
+                <Leaf size={14} className="text-[#D4A51C]" />
+                <span>WHO WE ARE</span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B6338] leading-tight">
+                Quality Produce & Essentials, Delivered with Reliability.
+              </h2>
+
+              <p className="text-gray-600 text-base leading-relaxed">
+                Heaven Global Pvt. Ltd. operates across fresh produce, daily essentials, packaged FMCG groceries, household items, and personal care. We bridge the gap between quality farm sources and consumer doorsteps.
               </p>
-              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                We believe that trust is built one delivery at a time. That’s why our distribution philosophy centers around efficiency, reliability, and an unwavering commitment to quality standards. From farm-fresh produce to branded packaged goods, every item is handled with care.
+
+              <p className="text-gray-600 text-base leading-relaxed">
+                Our operations are founded on three pillars: rigorous quality selection, dependable supply chain logistics, and customer satisfaction. Whether servicing retail consumers or wholesale businesses, Heaven Global stands for absolute reliability.
+              </p>
+
+              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
+                <div>
+                  <h4 className="font-extrabold text-2xl text-[#0B6338]">100%</h4>
+                  <p className="text-xs text-gray-500 font-semibold">Quality Checked Produce</p>
+                </div>
+                <div>
+                  <h4 className="font-extrabold text-2xl text-[#D4A51C]">50+ Cities</h4>
+                  <p className="text-xs text-gray-500 font-semibold">Supply Network Reach</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 relative" data-aos="fade-left">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <img 
+                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=80" 
+                  alt="Heaven Grocery warehouse & distribution" 
+                  className="w-full h-[400px] object-cover" 
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* MISSION & VISION */}
+      <section className="py-16 bg-[#FAF9F5] border-y border-amber-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            {/* MISSION */}
+            <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 space-y-4" data-aos="fade-up">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-[#0B6338] flex items-center justify-center">
+                <Target size={24} />
+              </div>
+              <h3 className="text-2xl font-extrabold text-[#0B6338]">Our Mission</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                To streamline grocery and fresh produce distribution, ensuring every household and business receives safe, fresh, and competitively priced daily essentials with complete reliability.
               </p>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl relative">
-               <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fresh Produce" className="w-full h-[500px] object-cover" />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-                  <div className="text-white">
-                    <p className="font-bold text-xl sm:text-2xl text-heaven-gold mb-1">Quality Commitment</p>
-                    <p>Delivering excellence to your doorstep.</p>
-                  </div>
-               </div>
+
+            {/* VISION */}
+            <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 space-y-4" data-aos="fade-up" data-aos-delay="100">
+              <div className="w-12 h-12 rounded-2xl bg-amber-100 text-[#D4A51C] flex items-center justify-center">
+                <Eye size={24} />
+              </div>
+              <h3 className="text-2xl font-extrabold text-[#0B6338]">Our Vision</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                To build India's most trusted grocery brand, known for uncompromised quality, customer-first service, and sustainable, farm-to-table sourcing networks.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* FOUNDER SPOTLIGHT */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#F4FBF7] rounded-3xl p-8 sm:p-12 border border-emerald-100 shadow-xl">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              
+              <div className="lg:col-span-5 flex justify-center">
+                <div className="rounded-2xl overflow-hidden border-4 border-[#D4A51C] shadow-xl max-w-xs">
+                  <img 
+                    src="/images/founder.jpg" 
+                    alt="Mr. Vivek Aggarwal" 
+                    className="w-full h-80 object-cover"
+                    onError={(e) => {
+                      e.target.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80";
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 space-y-4">
+                <div className="inline-flex items-center gap-2 text-[#D4A51C] font-bold text-xs uppercase tracking-widest">
+                  <Award size={16} />
+                  <span>FOUNDER STATEMENT</span>
+                </div>
+
+                <h3 className="text-3xl font-extrabold text-[#0B6338]">Mr. Vivek Aggarwal</h3>
+                <p className="text-sm font-bold text-gray-500">Founder, Heaven Global Pvt. Ltd.</p>
+
+                <blockquote className="bg-white p-6 rounded-2xl border-l-4 border-[#D4A51C] text-gray-700 italic font-medium leading-relaxed shadow-sm">
+                  “Our vision is to build a trusted brand that brings quality, reliability and convenience into everyday lives. Every delivery and every customer relationship reflects our personal commitment to excellence.”
+                </blockquote>
+              </div>
+
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-heaven-light-green">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="0">
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#0B6338] to-[#D4A51C] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
-              <div className="w-14 h-14 bg-heaven-light-green text-heaven-green group-hover:bg-[#0B6338] group-hover:text-white transition-colors duration-500 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                <Target size={28} />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#0B6338] transition-colors duration-300">Our Mission</h3>
-              <p className="text-gray-600 leading-relaxed">
-                To consistently provide high-quality groceries and daily essentials through an efficient, reliable, and customer-first distribution network.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#0B6338] to-[#D4A51C] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
-              <div className="w-14 h-14 bg-heaven-light-green text-heaven-green group-hover:bg-[#0B6338] group-hover:text-white transition-colors duration-500 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                <ShieldCheck size={28} />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#0B6338] transition-colors duration-300">Our Vision</h3>
-              <p className="text-gray-600 leading-relaxed">
-                To become the most trusted and preferred brand for everyday household needs, recognized for our uncompromising quality and service.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#0B6338] to-[#D4A51C] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
-              <div className="w-14 h-14 bg-heaven-light-green text-heaven-green group-hover:bg-[#0B6338] group-hover:text-white transition-colors duration-500 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                <Heart size={28} />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#0B6338] transition-colors duration-300">Our Values</h3>
-              <ul className="text-gray-600 space-y-3">
-                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-heaven-gold group-hover:scale-110 transition-transform"/> <span className="font-medium">Quality Assurance</span></li>
-                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-heaven-gold group-hover:scale-110 transition-transform"/> <span className="font-medium">Customer First</span></li>
-                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-heaven-gold group-hover:scale-110 transition-transform"/> <span className="font-medium">Reliability</span></li>
-                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-heaven-gold group-hover:scale-110 transition-transform"/> <span className="font-medium">Integrity</span></li>
-              </ul>
-            </div>
-          </div>
+      {/* CONTACT CTA BANNER */}
+      <section className="py-16 bg-[#042616] text-white text-center">
+        <div className="max-w-4xl mx-auto px-4 space-y-6">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Partner with Heaven Global</h2>
+          <p className="text-emerald-100 text-base max-w-xl mx-auto">
+            Interested in wholesale supply, retail distribution, or corporate enquiries? Let's connect today.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 bg-[#D4A51C] hover:bg-[#b88e14] text-[#042616] px-8 py-3.5 rounded-full font-bold text-sm shadow-lg transition-all"
+          >
+            Get in Touch <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
+
     </div>
   );
 };
