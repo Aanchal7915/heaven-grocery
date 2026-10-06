@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-heaven-green: #0a5c36;
+  --color-heaven-gold: #eba13a;
+  --color-heaven-light-green: #f4fbf7;
+  --color-heaven-dark: #1f2937;
+  --color-heaven-accent: #3b82f6; /* For specific CTAs if requested, but mostly green/gold */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+/* Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
